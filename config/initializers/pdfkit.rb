@@ -1,5 +1,6 @@
 # config/initializers/pdfkit.rb
 PDFKit.configure do |config|
+	config.wkhtmltopdf = Rails.root.join(‘vendor’, ‘wkhtmltopdf-amd64’).to_s if RAILS_ENV == ‘production’
   config.wkhtmltopdf = 'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
   config.default_options = {
     :page_size => 'Legal',
@@ -8,3 +9,4 @@ PDFKit.configure do |config|
   # Use only if your external hostname is unavailable on the server.
   config.root_url = "http://localhost" 
 end
+
