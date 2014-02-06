@@ -16,6 +16,10 @@
         </div>
         </div>
     <% end %>
+
   
 
 <%= link_to 'New User', new_user_path %>
+
+<p id="pdf_link"><%= link_to "Download (PDF)", users_path(:format => "pdf") %></p>
+
