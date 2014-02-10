@@ -2,8 +2,8 @@
 PDFKit.configure do |config|
 # config.wkhtmltopdf = "#{}"Rails.root.join(‘vendor’, ‘wkhtmltopdf-amd64’).to_s if Rails.env.production?
 
-
-  config.wkhtmltopdf = Rails.root.join('vendor', 'bin', wkhtmltopdf.exe).to_s
+  wkhtmltopdf_executable = 'wkhtmltopdf-amd64'
+  config.wkhtmltopdf = Rails.root.join('vendor', 'bin', wkhtmltopdf_executable).to_s
 
 
 # Rails.root.join(‘vendor’, ‘wkhtmltopdf-amd64’).to_s if Rails.env.production?
