@@ -2,6 +2,9 @@
 <h1>Listing users</h1>
 </div>
   
+
+  
+
     <% @users.each do |user| %>
       <div class="user">
         <strong><%=user.name %></strong>     
@@ -16,10 +19,7 @@
         </div>
         </div>
     <% end %>
-
-  
-
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-primary" %>
 
 <p id="pdf_link"><%= link_to "Download (PDF)", users_path(:format => "pdf") %></p>
 

@@ -10,3 +10,15 @@
 .user{
 	margin: 1px 0;
 }
+
+.user.hover{
+	background: #F0F0F0;
+}
+
+.user .admin{
+	display: none;
+}
+
+.user.hover .admin{         //.user.hover .admin   will   overwrite  the   .user .admin
+	display: inline;          // and in inspect element(right click) modify user hover instead of user    
+}
