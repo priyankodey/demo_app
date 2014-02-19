@@ -20,5 +20,6 @@
 }
 
 .user.hover .admin{         //.user.hover .admin   will   overwrite  the   .user .admin
-	display: inline;          // and in inspect element(right click) modify user hover instead of user    
+	display: inline;        // and in inspect element(right click) modify user hover instead of user and 
+	                        // will help for display on mouse hover (check users.js.coffee)    
 }

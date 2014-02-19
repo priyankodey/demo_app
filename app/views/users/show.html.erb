@@ -1,4 +1,14 @@
-<p id="notice"><%= notice %></p>
+
+<div class = "pad">
+
+
+
+<% if flash[:notice] %>
+	<div class="alert alert-success">
+       <button type="button" class="close" data-dismiss="alert">&times;</button>
+	   <%= flash[:notice] %>
+	</div>
+<% end %>
 
 <p>
   <strong>Name:</strong>
@@ -10,7 +20,10 @@
   <%= @user.email %>
 </p>
 
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
 <p id="pdf_link"><%= link_to "Download (PDF)", user_path(@user, :format => "pdf") %></p>
+</div>
+
